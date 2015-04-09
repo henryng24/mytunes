@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  </head>
   <body>
-  <div class="library"> </div>
-  <div class="song-queue"> </div>
+    <div class="container">
+      <h1> MyTunes </h1>
+
+      <div class="library-container">
+        <h2>Library</h2>
+        <table class="table table-striped library"> </table>
+      </div>
+
+      <div class="song-queue-container">
+        <h2>Song Queue</h2>
+        <table class="table table-striped song-queue"> </table>
+      </div>
+    </div>
     <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
      below them until after the scripts load-->
     <script src="bower_components/jquery/jquery.min.js"></script>
@@ -22,6 +36,7 @@
     <script src="views/SongQueueView.js"></script>
     <script src="views/SongQueueEntryView.js"></script>
     <script src="views/AppView.js"></script>
+    <script src="routers/Router.js"></script>
 
     <script>
       $(function(){
@@ -33,7 +48,9 @@
         var appView = new AppView({model: app});
 
         // put the view onto the screen
-        $('body').append(appView.render());
+        $('.library-container').append(appView.render());
+        Backbone.history.start();
+        
       });
     </script>
   </body>
