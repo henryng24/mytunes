@@ -13,7 +13,7 @@ var AppView = Backbone.View.extend({
     }, this);
   },
 
-  libraryHeader: '<h2>Library</h2>',
+  libraryHeader: '<h2 class="collection-heading">Library</h2>',
 
   render: function(){
     return this.$el.html([
