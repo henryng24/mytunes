@@ -13,9 +13,12 @@ var AppView = Backbone.View.extend({
     }, this);
   },
 
+  libraryHeader: '<h2>Library</h2>',
+
   render: function(){
     return this.$el.html([
       this.playerView.$el,
+      this.libraryHeader,
       this.libraryView.$el
     ]);
   }

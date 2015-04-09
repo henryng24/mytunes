@@ -5,9 +5,10 @@ var LibraryEntryView = Backbone.View.extend({
 
   template: _.template('<td><span class="add-to-queue">(<%= artist %>) </span> </td> \
     <td> <span class="add-to-queue"> <%= title %> </span></td> \
-    <td><%= playCount %></td> <td><%= voteCount %></td> \
-    <td><span class="plus-one"> +1 </span></td> \
-    <td> <span class="minus-one"> -1 </span> </td>'),
+    <td class="table-numbers"> <%= playCount %> </span> </td> \
+    <td class="table-numbers"> <%= voteCount %> </span></td> \
+    <td class="table-numbers"><div class="plus-one"> +1 </div></td> \
+    <td class="table-numbers"> <div class="minus-one"> -1 </div> </td>'),
 
   events: {
     'click .add-to-queue': function() {

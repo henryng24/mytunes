@@ -2,13 +2,13 @@
 <html>
   <head>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <div class="container">
       <h1> MyTunes </h1>
 
       <div class="library-container">
-        <h2>Library</h2>
         <table class="table table-striped library"> </table>
       </div>
 
@@ -49,7 +49,10 @@
 
         // put the view onto the screen
         $('.library-container').append(appView.render());
-        Backbone.history.start();
+
+        var router = new Router();
+
+        Backbone.history.start({pushState: true});
         
       });
     </script>
