@@ -3,6 +3,7 @@ var SongQueue = Songs.extend({
 
   initialize: function(){
     this.on('add', function(){
+
       if (this.at(1) === undefined) {
         this.playFirst();
       }
@@ -21,17 +22,17 @@ var SongQueue = Songs.extend({
         if (this.at(0)) {
           this.playFirst();
         } else {
-          $('audio').attr('src', '');
+          this.trigger('changeCurrentSong');
         }
       }
       
       this.remove(song);
     });
-
   },
 
   playFirst: function() {
     this.at(0).play();
+    this.at(0).set('playCount', this.at(0).get('playCount')+1);
   }
 
 });
