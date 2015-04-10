@@ -19,5 +19,35 @@ var songData = [
     url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/06+If+Your+Girl+Only+Knew.mp3",
     title: "If Your Girl Only Knew",
     artist: "Aaliyah",
+  },
+
+
+];
+
+var songData2 = [
+  {
+    url: 'herewithoutyou.mp3',
+    title: 'Here Without You (Cover)',
+    artist: 'Boyce Avenue'
+  },
+  {
+    url: 'iwantitthatway.mp3',
+    title: 'I Want It That Way (Cover)',
+    artist: 'Boyce Avenue'
+  },
+  {
+    url: 'justthewayyouare.mp3',
+    title: 'Just the Way You Are (Cover)',
+    artist: 'Boyce Avenue'
+  },
+  {
+    url: 'payphone.mp3',
+    title: 'Payphone (Cover)',
+    artist: 'Boyce Avenue'
+  },
+  {
+    url: 'whatmakesyoubeautiful.mp3',
+    title: 'What Makes You Beautiful (Cover)',
+    artist: 'Boyce Avenue'
   }
 ];
